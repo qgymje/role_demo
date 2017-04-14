@@ -87,11 +87,10 @@ func init() {
 
 	roleUsers = []RoleUser{}
 	roleUsers = append(roleUsers, AssignRole(users[0], roles[0]))
+	roleUsers = append(roleUsers, AssignRole(users[1], roles[0]))
 }
 
 func main() {
-	yes := HasPermission(users[0], resources[0], operations[0])
-	log.Println(yes)
 }
 
 func HasPermission(user User, res Resource, op Operation) bool {
